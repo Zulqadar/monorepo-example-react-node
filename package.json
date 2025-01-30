@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start:web": "yarn workspace @monorepo/web-app start",
+    "start:api": "yarn workspace @monorepo/api-server node src/index.js",
+    "dev": "concurrently \"yarn start:web\" \"yarn start:api\""
+  },
+  "dependencies": {
+    "concurrently": "8.0.0"
+  }
+}
